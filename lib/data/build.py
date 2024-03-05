@@ -71,7 +71,7 @@ def build_data_loader(cfg, split="train", num_im=-1, is_distributed=False, start
         )
         collator = BatchCollator(cfg.DATASET.SIZE_DIVISIBILITY)
         dataloader = data.DataLoader(dataset,
-                num_workers=images_per_batch,
+                num_workers=0,#images_per_batch
                 batch_sampler=batch_sampler,
                 collate_fn=collator,
             )

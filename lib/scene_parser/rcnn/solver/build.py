@@ -8,6 +8,7 @@ def make_optimizer(cfg, model):
     params = []
     lr = cfg.SOLVER.BASE_LR
     for key, value in model.named_parameters():
+        value.requires_grad = True
         if not value.requires_grad:
             continue
         weight_decay = cfg.SOLVER.WEIGHT_DECAY

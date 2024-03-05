@@ -5,7 +5,7 @@ DATASET:
   TEST_BATCH_SIZE: 1
 MODEL:
   WEIGHT_IMG: "catalog://ImageNetPretrained/MSRA/R-101"
-  WEIGHT_DET: "checkpoints/vg_benchmark_object/R-101-C4/faster_rcnn/BatchSize_6/Base_LR_0.005/checkpoint_0099999.pth"
+  WEIGHT_DET: "checkpoints/sg_grcnn_step_ckpt.pth"
   RELATION_ON: True
   ALGORITHM: "sg_baseline"
   USE_FREQ_PRIOR: False
@@ -23,7 +23,7 @@ MODEL:
     FREEZE_PARAMETER: True
   ROI_RELATION_HEAD:
     FILTER_NON_OVERLAP: False
-    USE_GT_BOXES: True
+    USE_GT_BOXES: False #True
     BATCH_SIZE_PER_IMAGE: 256
     TRIPLETS_PER_IMG: 100
     NUM_CLASSES: 51
