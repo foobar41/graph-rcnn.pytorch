@@ -230,6 +230,7 @@ class SceneGraphGeneration:
                 if timer:
                     timer.tic()
                 output = self.scene_parser(imgs)
+                self.cfg.MODEL.RELATION_ON = False
                 if self.cfg.MODEL.RELATION_ON:
                     output, output_pred = output
                     output_pred = [o.to(cpu_device) for o in output_pred]
