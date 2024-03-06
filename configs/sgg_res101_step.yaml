@@ -5,7 +5,7 @@ DATASET:
   TEST_BATCH_SIZE: 1
 MODEL:
   WEIGHT_IMG: "catalog://ImageNetPretrained/MSRA/R-101"
-  WEIGHT_DET: "checkpoints/sg_grcnn_step_ckpt.pth"
+  WEIGHT_DET: "/content/drive/MyDrive/VG/sg_grcnn_step_ckpt.pth"
   RELATION_ON: True
   ALGORITHM: "sg_baseline"
   USE_FREQ_PRIOR: False
